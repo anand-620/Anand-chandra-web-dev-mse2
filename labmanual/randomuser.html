@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Random User Info</title>
+
+    <!-- INTERNAL CSS -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #f4f4f4;
+            padding: 40px;
+            text-align: center;
+        }
+
+        .card {
+            background: white;
+            width: 350px;
+            margin: auto;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        img {
+            width: 150px;
+            border-radius: 50%;
+            margin-bottom: 15px;
+        }
+
+        h2 {
+            color: #333;
+        }
+
+        #btn {
+            margin-top: 20px;
+            padding: 10px 20px;
+            background: teal;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+        }
+
+        #btn:hover {
+            background: rgb(1, 110, 110);
+        }
+    </style>
+
+</head>
+<body>
+
+    <div class="card">
+        <img id="userImg" src="" alt="User Image">
+        <h2 id="userName">Name will appear here</h2>
+        <p id="userEmail">Email will appear here</p>
+
+        <button id="btn">Get Random User</button>
+    </div>
+
+    <script src="randomuser.js"></script>
+</body>
+</html>

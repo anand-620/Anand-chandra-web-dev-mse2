@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Interest Calculator</title>
+
+    <style>
+        body {
+            font-family: Arial;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+            background: #f2f2f2;
+        }
+
+        h1 {
+            margin-top: 40px;
+        }
+
+        .container {
+            margin-top: 30px;
+            background: white;
+            width: 350px;
+            padding: 20px;
+            border-radius: 8px;
+            display: inline-block;
+            box-shadow: 0 0 10px #ccc;
+        }
+
+        input {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+        }
+
+        button {
+            padding: 12px 25px;
+            background: #333;
+            color: white;
+            border: none;
+            cursor: pointer;
+            font-size: 16px;
+            margin-top: 10px;
+        }
+
+        button:hover {
+            background: black;
+        }
+
+        #result {
+            margin-top: 20px;
+            font-size: 18px;
+            color: green;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Simple Interest Calculator</h1>
+
+    <div class="container">
+        <input type="number" id="principal" placeholder="Enter Principal (P)">
+        <input type="number" id="rate" placeholder="Enter Rate (R)">
+        <input type="number" id="time" placeholder="Enter Time (T)">
+        <br>
+
+        <button id="calculateBtn">Calculate</button>
+
+        <div id="result"></div>
+    </div>
+
+    <!-- Main JS file running ES6 modules -->
+    <script type="module" src="display.js"></script>
+
+</body>
+</html>

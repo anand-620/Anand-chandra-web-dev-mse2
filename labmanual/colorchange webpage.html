@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Changer</title>
+
+    <style>
+        body {
+            text-align: center;
+            font-family: Arial;
+            margin: 0;
+            padding: 0;
+            transition: background 0.4s;
+        }
+
+        h1 {
+            margin-top: 60px;
+        }
+
+        #colorName {
+            font-size: 20px;
+            margin: 20px;
+            color: #333;
+        }
+
+        button {
+            padding: 12px 25px;
+            background: #333;
+            color: white;
+            border: none;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 20px;
+        }
+
+        button:hover {
+            background: black;
+        }
+    </style>
+</head>
+
+<body>
+
+    <h1>Color Changer Web Page</h1>
+    <p id="colorName">Current Color: White</p>
+
+    <button onclick="changeColor()">Change Background Color</button>
+
+    <script>
+        const colors = ["red", "blue", "green", "yellow", "purple", "orange", "pink", "skyblue", "lightgreen", "brown"];
+        
+        function changeColor() {
+            const randomIndex = Math.floor(Math.random() * colors.length);
+            const newColor = colors[randomIndex];
+
+            document.body.style.background = newColor;
+            document.getElementById("colorName").textContent = "Current Color: " + newColor;
+        }
+    </script>
+
+</body>
+</html>
