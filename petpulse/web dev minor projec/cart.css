@@ -1,0 +1,142 @@
+/* General Reset & Body */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(120deg, #fefefe, #ffe6cc);
+  margin: 0;
+  padding: 0;
+  color: #333;
+  transition: background 0.5s ease;
+}
+
+/* Navbar Styling */
+nav {
+  display: flex;
+  justify-content: center;
+  background: #ff7f50;
+  padding: 15px 0;
+  box-shadow: 0 5px 10px rgba(0,0,0,0.1);
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  margin: 0 20px;
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s;
+}
+
+nav a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width 0.3s;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+nav a:hover {
+  color: #ffe6cc;
+}
+
+/* Heading Styling */
+h1 {
+  text-align: center;
+  margin-top: 30px;
+  font-size: 2.5rem;
+  color: #ff7f50;
+  animation: fadeInDown 1s ease forwards;
+}
+
+/* Cart Container */
+#cartItems {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 40px auto;
+  max-width: 800px;
+  gap: 20px;
+}
+
+/* Cart Item */
+.cart-item {
+  background: #fff7f0;
+  border-left: 5px solid #ff7f50;
+  padding: 20px;
+  width: 100%;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transform: translateY(-20px);
+  opacity: 0;
+  animation: slideUp 0.5s forwards;
+}
+
+.cart-item h3 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.cart-item p {
+  margin: 5px 0 0 0;
+  font-weight: bold;
+}
+
+.cart-item button {
+  background: #ff7f50;
+  border: none;
+  color: white;
+  padding: 10px 18px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s, transform 0.2s;
+}
+
+.cart-item button:hover {
+  background: #ff4d1a;
+  transform: scale(1.05);
+}
+
+/* Empty Cart Message */
+#cartItems p {
+  font-size: 1.2rem;
+  color: #777;
+  animation: fadeIn 1s ease forwards;
+}
+
+/* Animations */
+@keyframes slideUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Pet Food - Pet Pulse</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar horizontal-nav">
+    <div class="logo">🐾 Pet Pulse</div>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="petfood.html" class="active">Pet Food</a></li>
+      <li><a href="adopt.html">Adopt</a></li>
+      <li><a href="contact.html">Contact</a></li>
+      <li><a href="cart.html">Cart (<span id="cartCount">0</span>)</a></li>
+    </ul>
+    <button id="darkModeToggle" class="dark-toggle">🌙 Dark Mode</button>
+  </nav>
+
+  <!-- Header Banner -->
+  <header class="banner">
+    <h1>Healthy Meals for Your Lovely Pets ❤️</h1>
+    <p>Give your pets the nutrition they deserve!</p>
+  </header>
+
+  <!-- Food Section -->
+  <section class="food-section">
+    <h2>Our Pet Food Collection</h2>
+    <div class="food-container">
+      <div class="food-card">
+        <img src="https://i.imgur.com/UYbU0Gk.png" alt="Dog Food">
+        <h3>Dog Food</h3>
+        <p>High-protein kibble with real chicken.</p>
+        <button class="add-to-cart" data-name="Dog Food" data-price="499">Add to Cart</button>
+      </div>
+
+      <div class="food-card">
+        <img src="https://i.imgur.com/VoylFJH.png" alt="Cat Food">
+        <h3>Cat Food</h3>
+        <p>Grain-free tuna mix for a healthy coat.</p>
+        <button class="add-to-cart" data-name="Cat Food" data-price="399">Add to Cart</button>
+      </div>
+
+      <div class="food-card">
+        <img src="https://i.imgur.com/07s1oVR.png" alt="Bird Food">
+        <h3>Bird Food</h3>
+        <p>Seed mix rich in vitamins and minerals.</p>
+        <button class="add-to-cart" data-name="Bird Food" data-price="299">Add to Cart</button>
+      </div>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Pet Pulse | Designed by Anand, Anshika & Abhishek</p>
+  </footer>
+
+  <script src="script2.js"></script>
+</body>
+</html>

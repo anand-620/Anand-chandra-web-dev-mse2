@@ -1,0 +1,704 @@
+* {
+  transition: background-color 0.3s, color 0.3s;
+}
+
+
+/* Banner */
+.banner {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  overflow: hidden;
+}
+
+.banner img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  filter: brightness(100%);
+}
+
+.banner-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+}
+
+.banner-text h1 {
+  font-size: 2.5em;
+  margin: 0;
+}
+
+.banner-text p {
+  font-size: 1.2em;
+}
+
+/* Animated Pets Section */
+.animated-pets {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 40px;
+  background: #fff8e1;
+}
+
+.pet-box {
+  text-align: center;
+  width: 200px;
+}
+
+.pet-box img {
+  width: 150px;
+  transition: transform 0.4s;
+}
+
+.pet-box img:hover {
+  transform: scale(1.1) rotate(5deg);
+}
+
+.pet-box p {
+  margin-top: 10px;
+  font-style: italic;
+  font-size: 0.9em;
+  color: #555;
+}
+
+
+
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: #fffaf0;
+}
+
+header {
+  background: #ff7700;
+  padding: 15px;
+  color: white;
+  text-align: center;
+}
+
+nav a {
+  margin: 0 10px;
+  color: rgb(138, 0, 251);
+  text-decoration: none;
+  position: relative;
+  font-size: 20px;
+  text-align: left;
+  padding: 10px 20px;
+}
+
+nav a:hover {
+  text-decoration: underline;
+  color: #ffe0b2;
+}
+
+
+.hero {
+  text-align: center;
+  padding: 50px;
+  background: #ffe0b2;
+}
+
+.pet-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+}
+
+.pet-card {
+  background: white;
+  border: 1px solid #ddd;
+  padding: 15px;
+  border-radius: 10px;
+  text-align: center;
+  width: 200px;
+}
+
+.pet-card img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+.form-container {
+  max-width: 400px;
+  margin: 20px auto;
+  background: white;
+  padding: 20px;
+  border-radius: 10px;
+}
+
+form input, form textarea, form button {
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+}
+
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+
+
+
+.pet-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding: 20px;
+  flex-wrap: wrap; /* makes cards wrap to next line if screen is small */
+}
+
+.pet-card {
+  background: white;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  text-align: center;
+  width: 220px;     /* fixed width */
+  height: 320px;    /* fixed height */
+  padding: 15px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between; /* keeps spacing neat */
+}
+
+.pet-card img {
+  width: 100%;
+  height: 180px;    /* fixed height for images */
+  object-fit: cover; /* crops image nicely */
+  border-radius: 10px;
+}
+
+
+
+/* 🌙 Dark Mode Fix */
+body.dark-mode {
+  background-color: #121212 !important;
+  color: white !important;
+}
+
+body.dark-mode header {
+  background-color: #1e1e1e !important;
+}
+
+body.dark-mode nav a {
+  color: #ffb74d !important;
+}
+
+body.dark-mode footer {
+  background-color: #1e1e1e !important;
+  color: #ffb74d !important;
+}
+
+body.dark-mode .pet-box {
+  background-color: #222 !important;
+}
+body.dark-mode .animated-pets {
+  background: #616161 !important;
+}
+
+
+
+
+
+
+---------------------------------------------------
+
+
+
+
+
+/* Root Colors */
+:root {
+  --bg-color: #fefefe;
+  --text-color: #333;
+  --header-bg: #ff7f50;
+  --nav-link: white;
+  --card-bg: #fff7f0;
+  --footer-bg: #ff7f50;
+  --btn-bg: #ff7f50;
+}
+
+body.dark-mode {
+  --bg-color: #121212;
+  --text-color: #f5f5f5;
+  --header-bg: #1f1f1f;
+  --nav-link: #f5f5f5;
+  --card-bg: #1e1e1e;
+  --footer-bg: #1f1f1f;
+  --btn-bg: #ff7f50;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.5s ease;
+}
+
+/* Dark Mode Button */
+.dark-mode-btn {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 10px 16px;
+  background: var(--btn-bg);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 100;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.dark-mode-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Header & Navbar */
+header {
+  background: var(--header-bg);
+  padding: 20px 0;
+  text-align: center;
+  color: var(--nav-link);
+}
+
+header h1 {
+  margin: 0 0 10px;
+  font-size: 2.5rem;
+  animation: fadeDown 1s ease forwards;
+}
+
+nav a {
+  margin: 0 15px;
+  color: var(--nav-link);
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s;
+}
+
+nav a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width 0.3s;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+nav a:hover {
+  color: #ffe6cc;
+}
+
+/* Pet Cards */
+.pet-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  padding: 30px 10px;
+}
+
+.pet-card {
+  background: var(--card-bg);
+  width: 220px;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.5s forwards;
+}
+
+.pet-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.pet-card h3 {
+  margin: 10px 0 5px;
+}
+
+.pet-card p {
+  margin: 3px 0;
+  font-weight: bold;
+}
+
+.pet-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+/* Footer */
+footer {
+  background: var(--footer-bg);
+  text-align: center;
+  padding: 15px 0;
+  color: var(--nav-link);
+  margin-top: 30px;
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+--------------------------------------------------------------
+
+/* Reuse same root variables for dark mode */
+:root {
+  --bg-color: #fefefe;
+  --text-color: #333;
+  --header-bg: #ff7f50;
+  --nav-link: white;
+  --card-bg: #fff7f0;
+  --footer-bg: #ff7f50;
+  --btn-bg: #ff7f50;
+}
+
+body.dark-mode {
+  --bg-color: #121212;
+  --text-color: #f5f5f5;
+  --header-bg: #1f1f1f;
+  --nav-link: #f5f5f5;
+  --card-bg: #1e1e1e;
+  --footer-bg: #1f1f1f;
+  --btn-bg: #ff7f50;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  margin: 0;
+  padding: 0;
+  background: var(--bg-color);
+  color: var(--text-color);
+  transition: all 0.5s ease;
+}
+
+/* Dark Mode Button */
+.dark-mode-btn {
+  position: fixed;
+  top: 10px;
+  right: 10px;
+  padding: 10px 16px;
+  background: var(--btn-bg);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  z-index: 100;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.dark-mode-btn:hover {
+  transform: scale(1.05);
+}
+
+/* Header & Navbar */
+header {
+  background: var(--header-bg);
+  padding: 20px 0;
+  text-align: center;
+  color: var(--nav-link);
+}
+
+header h1 {
+  margin: 0 0 10px;
+  font-size: 2.5rem;
+  animation: fadeDown 1s ease forwards;
+}
+
+nav a {
+  margin: 0 15px;
+  color: var(--nav-link);
+  text-decoration: none;
+  font-weight: bold;
+  position: relative;
+  transition: color 0.3s;
+}
+
+nav a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width 0.3s;
+  position: absolute;
+  bottom: -5px;
+  left: 0;
+}
+
+nav a:hover::after {
+  width: 100%;
+}
+
+nav a:hover {
+  color: #ffe6cc;
+}
+
+/* Form Container */
+.form-container {
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 20px;
+  background: var(--card-bg);
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.7s forwards;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+}
+
+label {
+  margin: 10px 0 5px;
+  font-weight: bold;
+}
+
+input, textarea {
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  transition: border 0.3s, background 0.3s, color 0.3s;
+  background: var(--bg-color);
+  color: var(--text-color);
+}
+
+input:focus, textarea:focus {
+  outline: none;
+  border-color: #ff7f50;
+}
+
+button[type="submit"] {
+  margin-top: 15px;
+  padding: 12px;
+  border-radius: 10px;
+  border: none;
+  background: var(--btn-bg);
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
+
+button[type="submit"]:hover {
+  transform: scale(1.05);
+  background: #ff4d1a;
+}
+
+/* Footer */
+footer {
+  background: var(--footer-bg);
+  text-align: center;
+  padding: 15px 0;
+  color: var(--nav-link);
+  margin-top: 30px;
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from {
+    transform: translateY(30px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes fadeDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+------------------------------------------------------------------
+
+
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background: var(--header-bg);
+  color: var(--nav-link);
+}
+
+.navbar .logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+}
+
+.navbar .nav-links {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+}
+
+.navbar .nav-links li a {
+  text-decoration: none;
+  color: var(--nav-link);
+  font-weight: bold;
+  position: relative;
+  padding: 5px 0;
+  transition: color 0.3s;
+}
+
+.navbar .nav-links li a::after {
+  content: '';
+  display: block;
+  width: 0;
+  height: 2px;
+  background: white;
+  transition: width 0.3s;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+
+.navbar .nav-links li a:hover::after {
+  width: 100%;
+}
+
+.navbar .nav-links li a.active {
+  color: #ffe6cc;
+}
+
+.dark-toggle {
+  background: var(--btn-bg);
+  border: none;
+  color: white;
+  padding: 8px 14px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.dark-toggle:hover {
+  transform: scale(1.05);
+  background: #ff4d1a;
+}
+
+/* Banner */
+
+/* Food Container */
+.food-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 25px;
+  padding: 20px;
+}
+
+.food-card {
+  background: var(--card-bg);
+  width: 220px;
+  padding: 15px;
+  border-radius: 15px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.1);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  opacity: 0;
+  transform: translateY(30px);
+  animation: fadeUp 0.5s forwards;
+}
+
+.food-card img {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+.food-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.2);
+}
+
+.add-to-cart {
+  margin-top: 10px;
+  padding: 10px 14px;
+  border-radius: 8px;
+  border: none;
+  background: var(--btn-bg);
+  color: white;
+  cursor: pointer;
+  transition: transform 0.2s, background 0.3s;
+}
+
+.add-to-cart:hover {
+  transform: scale(1.05);
+  background: #ff4d1a;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  padding: 15px 0;
+  background: var(--footer-bg);
+  color: var(--nav-link);
+  margin-top: 30px;
+}
+
+/* Animations */
+@keyframes fadeUp {
+  from { transform: translateY(30px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}

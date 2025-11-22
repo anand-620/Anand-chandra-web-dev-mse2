@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Pet Listings</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <button id="darkModeBtn" class="dark-mode-btn">Toggle Dark Mode</button>
+
+  <header>
+    <h1>Available Pets 🐾</h1>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="pets.html">Pets</a>
+      <a href="adopt.html">Adopt</a>
+    </nav>
+  </header>
+
+  <section class="pet-list">
+    <div class="pet-card">
+      <img src="/labra.jpg" alt="Dog">
+      <h3>Buddy</h3>
+      <p>Breed: Labrador</p>
+      <p>Age: 1 month</p>
+    </div>
+
+    <div class="pet-card">
+      <img src="/persian.jpg" alt="Cat">
+      <h3>Mittens</h3>
+      <p>Breed: Persian</p>
+      <p>Age: 6 months</p>
+    </div>
+
+    <div class="pet-card">
+      <img src="/beagle.jpg" alt="Dog">
+      <h3>Max</h3>
+      <p>Breed: Beagle</p>
+      <p>Age: 2 months</p>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 Pet Care</p>
+  </footer>
+
+  <script src="script2.js" defer></script>
+  <script>
+    // Dark Mode Toggle
+    const darkBtn = document.getElementById('darkModeBtn');
+    darkBtn.addEventListener('click', () => {
+      document.body.classList.toggle('dark-mode');
+    });
+  </script>
+</body>
+</html>
